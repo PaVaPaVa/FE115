@@ -39,7 +39,7 @@ let clear = function(){
     };
     return 
 };
-//// 
+// РЕДАКТИРОВАНИЕ ЗАДАЧ!
 task.addEventListener('click', function(event){
     doc.querySelectorAll('.task li .edit').forEach((item, index) => {
         if (item === event.target) {
@@ -49,7 +49,7 @@ task.addEventListener('click', function(event){
         };
     });
 });
-////
+
 // ОЧИСТКА ВСЕГО СПИСКА ЗАДАЧ ПО КЛИКУ НА КОРЗИНУ!
     removeButton.addEventListener('click', function(){
         clear();

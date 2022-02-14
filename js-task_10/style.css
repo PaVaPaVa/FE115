@@ -74,6 +74,7 @@ body {
         background-image: url(img/rem.png);
     }
     button.edit {
+        display: none;
         background-image: url(img/edit.png);
     }
     button.add:hover {
