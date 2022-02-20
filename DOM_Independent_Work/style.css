@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a9765b5;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+input {
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+input:focus {
+    background-color: rgb(243, 178, 59);
+    color: white;
+    font-weight: 600;
+}
+select {
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.button {
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition:all 1s 0s ease;
+    border: none;
+    border:1px solid gray;
+}
+.button:hover {
+    background-color: green;
+    color: bisque;
+    cursor: pointer;
+    border:1px solid white;
+    border-radius: 5px;
+}
+.price {
+    display: flex;
+    justify-content: center;
+    background-color: #93c8b0;
+    max-width: 500px;
+    margin: 0 auto;
+}
