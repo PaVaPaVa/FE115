@@ -92,7 +92,7 @@ input{
 }
 
 
-@media (max-width: 923px) {
+@media (max-width: 920px) {
     .cont_form {
         justify-content: center;
     }
