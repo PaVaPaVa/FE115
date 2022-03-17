@@ -7,7 +7,11 @@ body {
 ul, li {
     list-style: none;
     color:rgb(37 37 39);
-
+    transition: 0.5s linear all;
+}
+li:hover {
+    background-color: coral;
+    cursor: pointer;
 }
 .item {
     color:rgb(255, 255, 255);
