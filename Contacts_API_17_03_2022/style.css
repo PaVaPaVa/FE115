@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(31, 158, 118);
+    max-width: 80%;
+    margin: 0 auto;
+    
+}
+ul, li {
+    list-style: none;
+    color:rgb(37 37 39);
+    transition: 0.5s linear all;
+}
+li:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+.item {
+    color:rgb(255, 255, 255);
+    padding: 0 10px;
+}
+.cont_title {
+    text-align: center;
+    color: rgb(247, 247, 247);
+}
+.cont_form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+}
+input{
+    height: 25px;
+}
+.cont_button_submit {
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    background-color: rgba(0, 240, 12, 0.507);
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.4s linear;
+}
+
+.cont_button_submit:hover {
+    cursor: pointer;
+    background-color: green;
+    border-radius: none;
+    transform: scale(1.1);
+}
+
+.cont_list {
+    padding: 10px;
+}
+.cont_list_item {
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: rgba(15, 140, 241, 0.192);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+}
+.cont_list_item > div{
+    margin-bottom: 0.5em;
+}
+
+.cont_list_item_save,
+.cont_list_item_edit, 
+.cont_list_item_remove {
+    padding:5px;
+    width: 50px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(31, 158, 118);
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.4s linear;
+}
+
+.cont_list_item_save:hover {
+    background-color: rgb(15, 175, 15);
+    cursor: pointer;
+    color:white;
+    transform: scale(1.1);
+}
+.cont_list_item_edit:hover {
+    background-color: rgb(255, 174, 0);
+    cursor: pointer;
+    color:white;
+    transform: scale(1.1);
+}
+
+.cont_list_item_remove:hover {
+    background-color: rgb(255, 0, 0);
+    color:white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 920px) {
+    .cont_form {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .cont_form {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
