@@ -22,7 +22,7 @@ function Main(){
         import(`./${hash}.js`)
             .then(module => {
                 elem.innerHTML = '';
-                elem.append(module.default);
+                elem.append(module.default.init());
                 document.title = module.title;
             });
     }

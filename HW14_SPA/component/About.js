@@ -1,3 +1,4 @@
+
 function About(){
     this.title = 'About';
     const elem = document.createElement('div');
@@ -19,5 +20,5 @@ let elem = new About();
 let init = elem.init();
 let title = elem.title;
 
-export default init;
+export default elem;
 export {title};

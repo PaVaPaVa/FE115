@@ -18,9 +18,10 @@ function Card(){
     let btnRemoveAll = document.createElement('button');
     btnRemoveAll.classList.add('btn_removeAll');
     btnRemoveAll.innerHTML = `Очистить корзину`;
-    btnRemoveAll.addEventListener('click', function(e) {
+    btnRemoveAll.addEventListener('click', (e) => {
         e.preventDefault()
         localStorage.clear();
+        //addCard();
         location.reload();
     })
     ///////- очистка корзины
@@ -63,8 +64,17 @@ function Card(){
             btnRemove.classList.add('btn_remove');
             btnRemove.innerHTML = `X`;
 
-            cardItem.append(tPrice, counter, btnRemove); 
+            cardItem.append(tPrice, counter, btnRemove);
+            ////------------------------------------------ УДАЛЕНИЕ ЭЛЕМЕНТОВ по одному -----------////
+            this.cardRemove = (id) => {
+                this.card = this.card.filter(data => data.id !== id);
+                this.render();
+                localStorage.setItem('card', JSON.stringify(this.card));
+                location.reload();
+            }
+            ////----------------------------------------------------------------------------------//// 
             cardItems.append(cardItem, btnRemoveAll);   
+            btnRemove.addEventListener('click', _ => (this.cardRemove(data.id)))
         })
         console.log(this.prices);
         totalPrice.innerText =`Итого: ${this.prices.reduce((count, item) => count + item, 0).toFixed(2)} $`;
@@ -110,5 +120,5 @@ let init = elem.init();
 let widget = elem.cardWidget();
 let addCard = elem.addCard;
 let title = elem.title;
-export default init
+export default elem;
 export {widget, addCard, title}
